@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./server/.env
+    volumes:
+      # Persist vector DB and uploaded docs outside the container
+      - ./data/chroma_db:/data/chroma_db
+      - ./data/raw_docs:/data/raw_docs
+      - ./data/eval_logs:/data/eval_logs
+    restart: unless-stopped
