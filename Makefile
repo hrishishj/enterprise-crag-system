@@ -10,7 +10,7 @@ lint:
 	uv run ruff check . && uv run ruff format --check .
 
 types:
-	uv run mypy -p crag
+	uv run mypy -p crag -p evals
 
 arch:
 	uv run lint-imports
