@@ -33,7 +33,7 @@ legacy = [
   "python-multipart>=0.0.9",
 ]
 dev = [
-  "pytest>=8.2",
+  "pytest>=9.2.0",
   "pytest-cov>=5.0",
   "ruff>=0.5",
   "mypy>=1.10",
