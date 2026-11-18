@@ -4,6 +4,10 @@
 
 Built with **FastAPI · LangGraph · ChromaDB · OpenAI GPT-4o-mini**
 
+> **Status: being rebuilt.** The original prototype is frozen in [`legacy/server`](legacy/server) as the measured baseline.
+> See the [assessment](docs/ASSESSMENT.md), [target architecture](docs/TARGET_ARCHITECTURE.md),
+> [implementation plan](docs/IMPLEMENTATION_PLAN.md) and [audit log](docs/AUDIT.md). The instructions below run the legacy baseline.
+
 ---
 
 ## What It Does
@@ -84,7 +88,7 @@ enterprise-crag/
 ```bash
 # 1. Clone the repository
 git clone https://github.com/your-username/enterprise-crag-system.git
-cd enterprise-crag-system/server
+cd enterprise-crag-system/legacy/server
 
 # 2. Create and activate virtual environment
 python -m venv venv
@@ -113,8 +117,8 @@ Visit **http://localhost:8000/docs** for the interactive API.
 ### Docker Setup
 
 ```bash
-cp server/.env.example server/.env
-# Add your OpenAI API key to server/.env
+cp legacy/server/.env.example legacy/server/.env
+# Add your OpenAI API key to legacy/server/.env
 
 docker compose up --build
 ```
