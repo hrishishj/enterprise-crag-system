@@ -8,7 +8,7 @@ services:
     ports:
       - "8000:8000"
     env_file:
-      - ./server/.env
+      - ./legacy/server/.env
     volumes:
       # Persist vector DB and uploaded docs outside the container
       - ./data/chroma_db:/data/chroma_db

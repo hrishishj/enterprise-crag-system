@@ -1,0 +1,26 @@
+name: ci
+on:
+  push: { branches: [master] }
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with: { enable-cache: true }
+      - run: uv venv --python 3.12 && uv pip install -e ".[dev,legacy]"
+      - name: Lint
+        run: .venv/bin/ruff check . && .venv/bin/ruff format --check .
+      - name: Types
+        run: .venv/bin/mypy -p crag
+      - name: Architecture (layering)
+        run: .venv/bin/lint-imports
+      - name: Tests
+        run: .venv/bin/pytest -q --cov=crag --cov-report=term-missing

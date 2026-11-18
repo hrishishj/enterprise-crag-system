@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Install Python dependencies first (better layer caching)
-COPY server/requirements.txt ./requirements.txt
+COPY legacy/server/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application source
-COPY server/ ./
+COPY legacy/server/ ./
 
 # Create data directories inside the container
 RUN mkdir -p /data/raw_docs /data/chroma_db /data/eval_logs

@@ -22,3 +22,11 @@ data/eval_logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Tooling caches
+.coverage
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.import_linter_cache/
+node_modules/
