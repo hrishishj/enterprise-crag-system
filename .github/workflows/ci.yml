@@ -19,7 +19,7 @@ jobs:
       - name: Lint
         run: .venv/bin/ruff check . && .venv/bin/ruff format --check .
       - name: Types
-        run: .venv/bin/mypy -p crag
+        run: .venv/bin/mypy -p crag -p evals
       - name: Architecture (layering)
         run: .venv/bin/lint-imports
       - name: Tests

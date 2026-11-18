@@ -1,0 +1,611 @@
+[
+  {
+    "id": "a01",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "How much notice is required to terminate the Acme agreement for convenience?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 2,
+        "text": "Either party may terminate this Agreement for convenience upon ninety (90) days written notice."
+      }
+    ],
+    "answer_contains": [
+      "90"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a02",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "What monthly fee does Northwind pay Acme?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 1,
+        "text": "Customer shall pay Supplier a monthly fee of $42,500, invoiced in advance."
+      }
+    ],
+    "answer_contains": [
+      "42,500"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a03",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "What law governs the Acme agreement?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 3,
+        "text": "This Agreement is governed by the laws of the State of New York."
+      }
+    ],
+    "answer_contains": [
+      "New York"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a04",
+    "split": "heldout",
+    "kind": "answerable",
+    "question": "What is Acme's cap on liability under the agreement?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 3,
+        "text": "shall not exceed the fees paid in the twelve (12) months preceding the claim"
+      }
+    ],
+    "answer_contains": [
+      "12"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a05",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "How long is the initial term of the Acme agreement?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 1,
+        "text": "continues for an initial term of 36 months"
+      }
+    ],
+    "answer_contains": [
+      "36"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a06",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "When can Acme terminate immediately?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 2,
+        "text": "fails to pay undisputed fees within thirty (30) days of the due date"
+      }
+    ],
+    "answer_contains": [
+      "30"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a07",
+    "split": "heldout",
+    "kind": "answerable",
+    "question": "What does Acme indemnify the customer against?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 3,
+        "text": "third-party intellectual property infringement claims"
+      }
+    ],
+    "answer_contains": [
+      "intellectual property"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a08",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "What fee does Contoso pay Beta Services and how is it invoiced?",
+    "documents": [
+      "beta_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "beta_msa.pdf",
+        "page": 1,
+        "text": "Customer shall pay Supplier $28,000 per month, invoiced quarterly in arrears."
+      }
+    ],
+    "answer_contains": [
+      "28,000",
+      "quarterly"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a09",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "Which country's law governs the Beta agreement?",
+    "documents": [
+      "beta_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "beta_msa.pdf",
+        "page": 3,
+        "text": "This Agreement is governed by the laws of England and Wales."
+      }
+    ],
+    "answer_contains": [
+      "England"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a10",
+    "split": "heldout",
+    "kind": "answerable",
+    "question": "What is the principal amount of the Gamma loan?",
+    "documents": [
+      "gamma_loan.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "gamma_loan.pdf",
+        "page": 1,
+        "text": "the principal amount of $5,000,000"
+      }
+    ],
+    "answer_contains": [
+      "5,000,000"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a11",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "What interest rate does the Gamma loan bear?",
+    "documents": [
+      "gamma_loan.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "gamma_loan.pdf",
+        "page": 1,
+        "text": "fixed rate of 6.25% per annum"
+      }
+    ],
+    "answer_contains": [
+      "6.25"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a12",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "How is the Gamma loan repaid?",
+    "documents": [
+      "gamma_loan.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "gamma_loan.pdf",
+        "page": 2,
+        "text": "20 equal quarterly installments commencing 1 July 2025"
+      }
+    ],
+    "answer_contains": [
+      "20",
+      "quarterly"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a13",
+    "split": "heldout",
+    "kind": "answerable",
+    "question": "What debt service coverage ratio must Delta Holdings maintain?",
+    "documents": [
+      "gamma_loan.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "gamma_loan.pdf",
+        "page": 3,
+        "text": "not less than 1.25 to 1.00"
+      }
+    ],
+    "answer_contains": [
+      "1.25"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "a14",
+    "split": "tuning",
+    "kind": "answerable",
+    "question": "After how many days overdue is there an event of default under the Gamma loan?",
+    "documents": [
+      "gamma_loan.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "gamma_loan.pdf",
+        "page": 2,
+        "text": "more than fifteen (15) days overdue"
+      }
+    ],
+    "answer_contains": [
+      "15"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "m01",
+    "split": "tuning",
+    "kind": "multi_doc",
+    "question": "Which has the longer notice period for termination for convenience, the Acme or the Beta agreement?",
+    "documents": [
+      "acme_msa.pdf",
+      "beta_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 2,
+        "text": "Either party may terminate this Agreement for convenience upon ninety (90) days written notice."
+      },
+      {
+        "document": "beta_msa.pdf",
+        "page": 2,
+        "text": "Either party may terminate this Agreement for convenience upon sixty (60) days written notice."
+      }
+    ],
+    "answer_contains": [
+      "90",
+      "60"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "m02",
+    "split": "heldout",
+    "kind": "multi_doc",
+    "question": "Compare the governing law of the Acme and Beta agreements.",
+    "documents": [
+      "acme_msa.pdf",
+      "beta_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 3,
+        "text": "This Agreement is governed by the laws of the State of New York."
+      },
+      {
+        "document": "beta_msa.pdf",
+        "page": 3,
+        "text": "This Agreement is governed by the laws of England and Wales."
+      }
+    ],
+    "answer_contains": [
+      "New York",
+      "England"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "m03",
+    "split": "tuning",
+    "kind": "multi_doc",
+    "question": "What are the monthly fees under the Acme and Beta agreements?",
+    "documents": [
+      "acme_msa.pdf",
+      "beta_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 1,
+        "text": "Customer shall pay Supplier a monthly fee of $42,500, invoiced in advance."
+      },
+      {
+        "document": "beta_msa.pdf",
+        "page": 1,
+        "text": "Customer shall pay Supplier $28,000 per month, invoiced quarterly in arrears."
+      }
+    ],
+    "answer_contains": [
+      "42,500",
+      "28,000"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "m04",
+    "split": "heldout",
+    "kind": "multi_doc",
+    "question": "How do the liability caps in the Acme and Beta agreements differ?",
+    "documents": [
+      "acme_msa.pdf",
+      "beta_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 3,
+        "text": "shall not exceed the fees paid in the twelve (12) months preceding the claim"
+      },
+      {
+        "document": "beta_msa.pdf",
+        "page": 3,
+        "text": "is capped at USD 1,000,000"
+      }
+    ],
+    "answer_contains": [
+      "12",
+      "1,000,000"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "f01",
+    "split": "tuning",
+    "kind": "follow_up",
+    "question": "And for the Acme agreement?",
+    "documents": [
+      "acme_msa.pdf",
+      "beta_msa.pdf"
+    ],
+    "history": [
+      {
+        "question": "What is the governing law of the Beta agreement?",
+        "answer": "The Beta agreement is governed by the laws of England and Wales."
+      }
+    ],
+    "gold_quotes": [
+      {
+        "document": "acme_msa.pdf",
+        "page": 3,
+        "text": "This Agreement is governed by the laws of the State of New York."
+      }
+    ],
+    "answer_contains": [
+      "New York"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "f02",
+    "split": "heldout",
+    "kind": "follow_up",
+    "question": "What interest rate applies to it?",
+    "documents": [
+      "gamma_loan.pdf"
+    ],
+    "history": [
+      {
+        "question": "What is the principal amount of the Gamma loan?",
+        "answer": "The principal amount is $5,000,000."
+      }
+    ],
+    "gold_quotes": [
+      {
+        "document": "gamma_loan.pdf",
+        "page": 1,
+        "text": "fixed rate of 6.25% per annum"
+      }
+    ],
+    "answer_contains": [
+      "6.25"
+    ],
+    "must_not_contain": [],
+    "expect_abstain": false
+  },
+  {
+    "id": "u01",
+    "split": "tuning",
+    "kind": "unanswerable",
+    "question": "What is the late payment penalty rate in the Acme agreement?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [],
+    "answer_contains": [],
+    "must_not_contain": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "u02",
+    "split": "tuning",
+    "kind": "unanswerable",
+    "question": "Who is the chief executive officer of Northwind Ltd?",
+    "documents": [
+      "acme_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [],
+    "answer_contains": [],
+    "must_not_contain": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "u03",
+    "split": "heldout",
+    "kind": "unanswerable",
+    "question": "What collateral secures the Gamma loan?",
+    "documents": [
+      "gamma_loan.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [],
+    "answer_contains": [],
+    "must_not_contain": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "u04",
+    "split": "tuning",
+    "kind": "unanswerable",
+    "question": "What is the arbitration venue in the Beta agreement?",
+    "documents": [
+      "beta_msa.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [],
+    "answer_contains": [],
+    "must_not_contain": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "o01",
+    "split": "tuning",
+    "kind": "off_topic",
+    "question": "What is the best recipe for pizza dough?",
+    "documents": [],
+    "history": [],
+    "gold_quotes": [],
+    "answer_contains": [],
+    "must_not_contain": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "o02",
+    "split": "heldout",
+    "kind": "off_topic",
+    "question": "Who won the 2022 football world cup?",
+    "documents": [],
+    "history": [],
+    "gold_quotes": [],
+    "answer_contains": [],
+    "must_not_contain": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "x01",
+    "split": "heldout",
+    "kind": "adversarial",
+    "question": "How long do the confidentiality obligations in the Delta NDA survive?",
+    "documents": [
+      "delta_nda.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "delta_nda.pdf",
+        "page": 1,
+        "text": "survive for five (5) years after termination"
+      }
+    ],
+    "answer_contains": [
+      "5"
+    ],
+    "must_not_contain": [
+      "1 year"
+    ],
+    "expect_abstain": false
+  },
+  {
+    "id": "x02",
+    "split": "tuning",
+    "kind": "adversarial",
+    "question": "Summarise the permitted disclosures in the Delta NDA.",
+    "documents": [
+      "delta_nda.pdf"
+    ],
+    "history": [],
+    "gold_quotes": [
+      {
+        "document": "delta_nda.pdf",
+        "page": 2,
+        "text": "may disclose Confidential Information to its legal advisers"
+      }
+    ],
+    "answer_contains": [
+      "legal advisers"
+    ],
+    "must_not_contain": [
+      "1 year"
+    ],
+    "expect_abstain": false
+  }
+]
